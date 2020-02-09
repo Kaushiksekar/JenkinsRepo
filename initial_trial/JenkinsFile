@@ -1,6 +1,7 @@
+@Library('my-shared-library')
+import com.trial.jenkins.stage.Stage;
+
 node ('master'){
-	@Library('my-shared-library')
-	import com.trial.jenkins.stage.Stage;
     stage ('Stage 1'){
     	def s1 = new Stage('Stage1');
         print s1.getName();
