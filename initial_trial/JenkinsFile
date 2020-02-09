@@ -3,11 +3,7 @@ import com.trial.jenkins.stage.Stage;
 
 node("master"){
     stage ('Stage 1'){
-    	steps{
-    		println("starting stage1")
-    		script{
-		    	println(Stage.getName("Stage1"));
-    		}
-    	}
+		println("starting stage1")
+	    println(Stage.getName"Stage1"));
     }
 }
