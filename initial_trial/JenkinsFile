@@ -1,4 +1,4 @@
-@Library('testlibrary@') import Stage;
+import Stage;
 
 node ('master'){
     Stage s = new Stage();
