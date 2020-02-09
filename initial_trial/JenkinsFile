@@ -1,7 +1,5 @@
 node("master"){
     stage ('Stage 1'){
-		steps{
-			sh 'ls'
-		}
+		sh 'ls'
     }
 }
