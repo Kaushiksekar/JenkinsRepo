@@ -1,10 +1,14 @@
-node("master"){
-    stage ('Stage 1'){
-		def a = add(5, 4);
-		println(a)
-    }
-}
+@Library ('my-shared-library@master')
+import com.trial.jenkins.stage.Stage;
 
-def add(int a, int b){
-	return a+b;
+node("master"){
+	def s = null;
+    stage ('Stage 1'){
+		s = new Stage("Stage1");
+		println(s.getName());
+    }
+    stage ('Stage2'){
+    	s = new Stage("Stage2");
+    	println(s.getName());
+    }
 }
