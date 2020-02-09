@@ -2,17 +2,21 @@ package com.trial.jenkins.stage
 
 class Stage {
 
-    private String name;
-
-    Stage(String name) {
-        this.name = name
+    static getName(String name1){
+        return "The name is ${name1}";
     }
 
-    String getName() {
-        return name
-    }
-
-    void setName(String name) {
-        this.name = name
-    }
+//    private String name;
+//
+//    Stage(String name) {
+//        this.name = name
+//    }
+//
+//    String getName() {
+//        return name
+//    }
+//
+//    void setName(String name) {
+//        this.name = name
+//    }
 }
