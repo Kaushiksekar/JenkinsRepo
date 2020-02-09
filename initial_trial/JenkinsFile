@@ -1,9 +1,7 @@
-@Library('my-shared-library@master') _
-import com.trial.jenkins.stage.Stage;
-
 node("master"){
     stage ('Stage 1'){
-		println("starting stage1")
-	    println(Stage.getName("Stage1"));
+		steps{
+			sh 'ls'
+		}
     }
 }
