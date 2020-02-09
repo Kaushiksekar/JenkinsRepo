@@ -1,12 +1,12 @@
 node ('master'){
-	def rootDir = pwd()
-    def s = load "Stage.groovy";
+	@Library('my-shared-library')
+	import com.trial.jenkins.stage.Stage;
     stage ('Stage 1'){
-        s.setName('Stage1');
-        print s.getName();
+    	def s1 = new Stage('Stage1');
+        print s1.getName();
     }
     stage ('Stage 2'){
-        s.setName('Stage2');
-        print s.getName();
+    	def s2 = new Stage('Stage2');
+        print s2.getName();
     }
 }
