@@ -1,0 +1,13 @@
+import Stage;
+
+node ('master'){
+    Stage s = new Stage();
+    stage ('Stage 1'){
+        s.setName('Stage1');
+        print s.getName();
+    }
+    stage ('Stage 2'){
+        s.setName('Stage2');
+        print s.getName();
+    }
+}
