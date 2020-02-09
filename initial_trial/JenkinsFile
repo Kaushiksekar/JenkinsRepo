@@ -1,6 +1,10 @@
 node("master"){
     stage ('Stage 1'){
-		def a = 5 + 4;
+		def a = add(5, 4);
 		println(a)
     }
+}
+
+def add(int a, int b){
+	return a+b;
 }
