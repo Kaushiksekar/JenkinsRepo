@@ -1,12 +1,23 @@
 library('my-shared-library').com.trial.jenkins.stage.Stage;
 
-node("master"){
+pipeline{
+	agent none
     stage ('Stage 1'){
-    	Stage s1 = new Stage('Stage1');
-        print s1.getName();
+    	steps{
+    		println("starting stage1")
+    		script{
+		    	def s1 = new Stage('Stage1');
+		        print s1.getName();
+    		}
+    	}
     }
     stage ('Stage 2'){
-    	Stage s2 = new Stage('Stage2');
-        print s2.getName();
+    	steps{
+    		println("starting stage2")
+    		script{
+		    	def s2 = new Stage('Stage2');
+		        print s2.getName();
+    		}
+    	}
     }
 }
