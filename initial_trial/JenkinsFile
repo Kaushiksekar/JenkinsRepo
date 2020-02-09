@@ -1,11 +1,8 @@
 node ('master'){
-    def s = load 'Stage.groovy';
     stage ('Stage 1'){
-        s.setName('Stage1');
-        print s.getName();
+        print 'Stage1';
     }
     stage ('Stage 2'){
-        s.setName('Stage2');
-        print s.getName();
+        print 'Stage2';
     }
 }
