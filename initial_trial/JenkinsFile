@@ -1,5 +1,7 @@
 def lib = library('my-shared-library@master').com.trial.jenkins.stage;
 
+println(lib)
+
 node("master"){
     stage ('Stage 1'){
     	steps{
