@@ -7,3 +7,5 @@ class Stage{
         return this.name;
     }
 }
+
+return new Stage();
