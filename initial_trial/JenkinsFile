@@ -1,6 +1,6 @@
 node ('master'){
 	def rootDir = pwd()
-    def s = load "initial_script/Stage.groovy";
+    def s = load "Stage.groovy";
     stage ('Stage 1'){
         s.setName('Stage1');
         print s.getName();
