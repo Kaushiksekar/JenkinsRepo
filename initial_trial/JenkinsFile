@@ -1,4 +1,4 @@
-library('my-shared-library').com.trial.jenkins.stage.Stage;
+library('my-shared-library').com.trial.jenkins.stage.Stage.getName;
 
 pipeline{
 	agent none
@@ -6,8 +6,7 @@ pipeline{
     	steps{
     		println("starting stage1")
     		script{
-		    	def s1 = new Stage('Stage1');
-		        print s1.getName();
+		    	println(getName("Stage1"));
     		}
     	}
     }
@@ -15,8 +14,7 @@ pipeline{
     	steps{
     		println("starting stage2")
     		script{
-		    	def s2 = new Stage('Stage2');
-		        print s2.getName();
+		    	println(getName("Stage2"));
     		}
     	}
     }
