@@ -2,11 +2,11 @@ library('my-shared-library').com.trial.jenkins.stage.Stage;
 
 node("master"){
     stage ('Stage 1'){
-    	def s1 = new Stage('Stage1');
+    	Stage s1 = new Stage('Stage1');
         print s1.getName();
     }
     stage ('Stage 2'){
-    	def s2 = new Stage('Stage2');
+    	Stage s2 = new Stage('Stage2');
         print s2.getName();
     }
 }
