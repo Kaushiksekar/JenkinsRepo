@@ -1,8 +1,12 @@
 node ('master'){
+	def rootDir = pwd()
+    def s = load '${rootDir}@script/Stage.groovy';
     stage ('Stage 1'){
-        print 'Stage1';
+        s.setName('Stage1');
+        print s.getName();
     }
     stage ('Stage 2'){
-        print 'Stage2';
+        s.setName('Stage2');
+        print s.getName();
     }
 }
