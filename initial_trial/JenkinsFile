@@ -1,7 +1,6 @@
 library('my-shared-library').com.trial.jenkins.stage.Stage.getName;
 
-pipeline{
-	agent any
+node("master"){
     stage ('Stage 1'){
     	steps{
     		println("starting stage1")
@@ -14,7 +13,7 @@ pipeline{
     	steps{
     		println("starting stage2")
     		script{
-		    	println(getName("Stage2"));
+		    	println(getName("Stage1"));
     		}
     	}
     }
