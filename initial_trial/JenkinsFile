@@ -1,7 +1,5 @@
-import Stage;
-
 node ('master'){
-    Stage s = new Stage();
+    Stage s = load 'Stage.groovy';
     stage ('Stage 1'){
         s.setName('Stage1');
         print s.getName();
