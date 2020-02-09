@@ -1,4 +1,4 @@
-@SharedLibrary('my-shared-library') _
+@Library('my-shared-library')
 import com.trial.jenkins.stage.Stage;
 
 pipeline{
