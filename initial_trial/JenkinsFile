@@ -1,5 +1,6 @@
 node("master"){
     stage ('Stage 1'){
-		sh 'ls'
+		def a = 5 + 4;
+		println(a)
     }
 }
