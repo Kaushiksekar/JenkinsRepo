@@ -10,12 +10,4 @@ node("master"){
     		}
     	}
     }
-    stage ('Stage 2'){
-    	steps{
-    		println("starting stage2")
-    		script{
-		    	println(Stage.getName("Stage1"));
-    		}
-    	}
-    }
 }
