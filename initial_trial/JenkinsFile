@@ -1,5 +1,5 @@
 node ('master'){
-    Stage s = load 'Stage.groovy';
+    def s = load 'Stage.groovy';
     stage ('Stage 1'){
         s.setName('Stage1');
         print s.getName();
