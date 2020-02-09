@@ -1,13 +1,12 @@
-def lib = library('my-shared-library@master').com.trial.jenkins.stage;
-
-println(lib)
+@Library('my-shared-library@master') _
+import com.trial.jenkins.stage.Stage;
 
 node("master"){
     stage ('Stage 1'){
     	steps{
     		println("starting stage1")
     		script{
-		    	println(lib.Stage.getName("Stage1"));
+		    	println(Stage.getName("Stage1"));
     		}
     	}
     }
@@ -15,7 +14,7 @@ node("master"){
     	steps{
     		println("starting stage2")
     		script{
-		    	println(lib.Stage.getName("Stage1"));
+		    	println(Stage.getName("Stage1"));
     		}
     	}
     }
