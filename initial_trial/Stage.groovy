@@ -1,4 +1,4 @@
-class Stage{
+public class Stage{
     String name;
     public void setName(String name){
         this.name = name;
@@ -7,5 +7,3 @@ class Stage{
         return this.name;
     }
 }
-
-return new Stage();
