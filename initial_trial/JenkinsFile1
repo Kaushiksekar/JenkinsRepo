@@ -3,7 +3,6 @@
 import org.yaml.snakeyaml.Yaml
 
 node("master"){
-	Yaml parser = new Yaml()
-	Map pipelineDefinition = parser.load(new File("${Jenkins.instance.getJob('git_pipeline_yaml').workspace}/pipeline.yaml").text)
-	println(pipelineDefinition.pipelineType)
+	datas = readYaml file: 'pipeline.yaml'
+	println("${datas.pipelineType}")
 }
