@@ -4,6 +4,6 @@ import org.yaml.snakeyaml.Yaml
 
 node("master"){
 	Yaml parser = new Yaml()
-	Map pipelineDefinition = parser.load(new File(pwd() + 'JenkinsRepo/initial_script/pipeline.yaml').text)
+	Map pipelineDefinition = parser.load(new File(pwd() + '/JenkinsRepo/initial_script/pipeline.yaml').text)
 	println(pipelineDefinition.pipelineType)
 }
