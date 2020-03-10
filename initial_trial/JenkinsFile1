@@ -1,3 +1,5 @@
 node("master"){
-	println("Hello World")
+	Yaml parser = new Yaml()
+	Map pipelineDefinition = parser.load(new File(pwd() + '/pipeline.yaml').text)
+	println(pipelineDefinition.pipelineType)
 }
