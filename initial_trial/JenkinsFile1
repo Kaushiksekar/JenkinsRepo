@@ -3,6 +3,6 @@
 import org.yaml.snakeyaml.Yaml
 
 node("master"){
-	datas = readYaml file: 'pipeline.yaml'
+	datas = readYaml file: 'pipeline.yml'
 	println("${datas.pipelineType}")
 }
